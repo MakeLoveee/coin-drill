@@ -1,4 +1,4 @@
-const C="coindrill-6352935";
+const C="coindrill-68944275";
 const F=["./","./index.html","./manifest.json","./icon-180.png","./icon-192.png","./icon-512.png"];
 self.addEventListener("install",e=>{self.skipWaiting();e.waitUntil(caches.open(C).then(c=>c.addAll(F)))});
 self.addEventListener("activate",e=>{e.waitUntil(caches.keys().then(k=>Promise.all(k.filter(x=>x!==C).map(x=>caches.delete(x)))).then(()=>self.clients.claim()))});
